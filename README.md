@@ -1,4 +1,4 @@
-# Versionable
+# Versionable forked from Mpociot/Versionable
 ## Easy to use Model versioning for Laravel
 
 ![image](http://img.shields.io/packagist/v/mpociot/versionable.svg?style=flat)
