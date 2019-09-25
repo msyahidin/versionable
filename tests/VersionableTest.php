@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Config;
 use Mockery as m;
 use Illuminate\Database\Eloquent\Model;
-use Mpociot\Versionable\Version;
-use Mpociot\Versionable\VersionableTrait;
+use Develoopin\Versionable\Version;
+use Develoopin\Versionable\VersionableTrait;
 
 class VersionableTest extends VersionableTestCase
 {

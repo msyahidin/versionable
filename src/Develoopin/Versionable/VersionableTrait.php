@@ -1,12 +1,12 @@
 <?php
-namespace Mpociot\Versionable;
+namespace Develoopin\Versionable;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 /**
  * Class VersionableTrait
- * @package Mpociot\Versionable
+ * @package Develoopin\Versionable
  */
 trait VersionableTrait
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Mpociot\Versionable;
+namespace Develoopin\Versionable;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Eloquent\Model as Eloquent;
@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Version
- * @package Mpociot\Versionable
+ * @package Develoopin\Versionable
  */
 class Version extends Eloquent
 {
