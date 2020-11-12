@@ -1,12 +1,12 @@
-# Versionable forked from Mpociot/Versionable
+# Versionable forked from mpociot/Versionable
 ## Easy to use Model versioning for Laravel
 
-![image](http://img.shields.io/packagist/v/mpociot/versionable.svg?style=flat)
-![image](http://img.shields.io/packagist/l/mpociot/versionable.svg?style=flat)
-![image](http://img.shields.io/packagist/dt/mpociot/versionable.svg?style=flat)
-[![codecov.io](https://codecov.io/github/mpociot/versionable/coverage.svg?branch=master)](https://codecov.io/github/mpociot/versionable?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpociot/versionable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mpociot/versionable/?branch=master)
-[![Build Status](https://travis-ci.org/mpociot/versionable.svg?branch=master)](https://travis-ci.org/mpociot/versionable)
+![image](http://img.shields.io/packagist/v/develoopin/versionable.svg?style=flat)
+![image](http://img.shields.io/packagist/l/develoopin/versionable.svg?style=flat)
+![image](http://img.shields.io/packagist/dt/develoopin/versionable.svg?style=flat)
+[![codecov.io](https://codecov.io/github/develoopin/versionable/coverage.svg?branch=master)](https://codecov.io/github/develoopin/versionable?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/develoopin/versionable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/develoopin/versionable/?branch=master)
+[![Build Status](https://travis-ci.org/develoopin/versionable.svg?branch=master)](https://travis-ci.org/develoopin/versionable)
 
 Keep track of all your model changes and revert to previous versions of it.
 
@@ -24,16 +24,16 @@ $oldModel = Version::find(100)->getModel();
 
 In order to add Versionable to your project, just add 
 
-    "mpociot/versionable": "~3.0"
+    "develoopin/versionable": "~3.0"
 
 to your composer.json. Then run `composer install` or `composer update`.
 
-Or run `composer require mpociot/versionable ` if you prefere that.
+Or run `composer require develoopin/versionable ` if you prefere that.
 
 Run the migrations to create the "versions" table that will hold all version information.
 
 ```bash
-php artisan migrate --path=vendor/mpociot/versionable/src/migrations
+php artisan migrate --path=vendor/develoopin/versionable/src/migrations
 ```
 
 <a name="usage" />
@@ -45,7 +45,7 @@ Let the Models you want to set under version control use the `VersionableTrait`.
 ```php
 class Content extends Model {
 	
-	use Mpociot\Versionable\VersionableTrait;
+	use develoopin\Versionable\VersionableTrait;
 	
 }
 ```
@@ -67,7 +67,7 @@ To exclude specific attributes from versioning, add a new array property to your
 ```php
 class User extends Model {
 	
-	use Mpociot\Versionable\VersionableTrait;
+	use develoopin\Versionable\VersionableTrait;
 	
 	/**
 	 * @var array
@@ -179,9 +179,9 @@ $user->update([
 
 ### Use different version table
 
-Some times we want to have models versions in differents tables. By default versions are stored in the table 'versions', defined in Mpociot\Versionable\Version::$table.
+Some times we want to have models versions in differents tables. By default versions are stored in the table 'versions', defined in develoopin\Versionable\Version::$table.
 
-To use a different table to store version for some model we have to change the table name. To do so, create a model that extends Mpociot\Versionable\Version and set the $table property to another table name.
+To use a different table to store version for some model we have to change the table name. To do so, create a model that extends develoopin\Versionable\Version and set the $table property to another table name.
 
 ```php
 class MyModelVersion extends Version
