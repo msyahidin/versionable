@@ -170,12 +170,13 @@ trait VersionableTrait
             ( $this->versioningEnabled === true && !$this->updating && !is_null($this->versionableDirtyData) && count($this->versionableDirtyData))
         ) {
             // Save a new version
+            $data = get_class($this)::find($this->getKey());
             $class                     = $this->getVersionClass();
             $version                   = new $class();
             $version->versionable_id   = $this->getKey();
             $version->versionable_type = get_class($this);
             $version->user_id          = $this->getAuthUserId();
-            $version->model_data       = serialize($this->getAttributes());
+            $version->model_data       = serialize($data);
 
             if (!empty( $this->reason )) {
                 $version->reason = $this->reason;
